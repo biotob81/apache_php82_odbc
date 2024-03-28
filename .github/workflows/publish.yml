@@ -1,7 +1,7 @@
 name: publish
 on: [push]
 jobs:
-  nextcloud:
+  apache_php82_odbc:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
@@ -12,7 +12,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the nextcloud Docker image
+      - name: Build the apache-php-82-odbc Docker image
         run: |
          docker build . --tag ghcr.io/biotob81/apache_php82_odbc:latest
          docker push ghcr.io/biotob81/apache_php82_odbc:latest
