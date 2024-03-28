@@ -18,9 +18,6 @@ RUN a2enmod rewrite
 # Ändere das Arbeitsverzeichnis zum Standardverzeichnis des Apache-Web-Servers
 WORKDIR /var/www/html
 
-# Kopiere deine PHP-Dateien in das Arbeitsverzeichnis
-COPY index.php .
-
 # Setze den Port für den Container
 EXPOSE 80
 
